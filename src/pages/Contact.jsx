@@ -2,26 +2,34 @@ import React, { useState } from "react";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { db } from "../firebase";
 
+// Contact Form Component:
+// Handles user input, validation, and writes messages to Firestore.
 function Contact() {
+  // Local form state (controlled inputs)
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const [status, setStatus] = useState(""); // success/error message
+  // Status message for user feedback (success, error, validation)
+  const [status, setStatus] = useState("");
+
+  // Loading flag to disable form while sending
   const [loading, setLoading] = useState(false);
 
-  // Input change handler
+  // Generic input change handler:
+  // Updates whichever field is being typed in.
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // Submit handler
+  // Submit handler:
+  // Validates input, saves the message to Firestore, and gives user feedback.
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validation
+    // Validation guard
     if (!form.name || !form.email || !form.message) {
       setStatus("Please fill out all fields.");
       return;
@@ -38,6 +46,7 @@ function Contact() {
         createdAt: Timestamp.now(),
       });
 
+      // Success feedback and reset form
       setStatus("Message sent successfully!");
       setForm({ name: "", email: "", message: "" });
     } catch (err) {

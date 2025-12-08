@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import portraitImg from "../assets/gallery/Portrait.jpg";
 
 function Home() {
   const navigate = useNavigate();
@@ -39,7 +40,7 @@ function Home() {
 
         {/* Right Image */}
         <div className="hero-image">
-          <div className="image-placeholder"></div>
+          <img src={portraitImg} alt="Portrait" className="portrait-img" />
         </div>
       </header>
     </div>
