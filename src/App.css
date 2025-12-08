@@ -85,21 +85,31 @@
   margin-bottom: 30px;
 }
 
+/* ===== BUTTON GROUP ===== */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* ===== HERO BUTTONS ===== */
 .cta-button {
-  background: var(--orange-1);
-  border: none;
   padding: 12px 25px;
   border-radius: 8px;
+  border: none;
+  background: var(--orange-1);
   color: var(--text-light);
   font-size: 18px;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .cta-button:hover {
   background: var(--yellow-1);
+  color: var(--text-light);
 }
 
-/* ===== HERO IMAGE PLACEHOLDER ===== */
+/* ===== HERO IMAGE ===== */
 .hero-image {
   width: 300px;
   height: 400px;
@@ -115,10 +125,63 @@
   border-radius: 12px;
 }
 
-/* ===========================
-   ABOUT PAGE STYLING
-   =========================== */
+/* ===== DYNAMIC HERO SECTION ===== */
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
 
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+    max-width: 90%;
+    margin: 0 auto 30px auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .image-placeholder {
+    width: 220px;
+    height: 330px;
+  }
+}
+
+@media (max-width: 500px) {
+  .image-placeholder {
+    width: 160px;
+    height: 240px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+}
+
+/* ===== ABOUT PAGE STYLING ===== */
 .about-page {
   color: var(--text-light);
 }
@@ -166,10 +229,7 @@
   margin-bottom: 30px;
 }
 
-/* ===========================
-   PROJECTS PAGE STYLING
-   =========================== */
-
+/* ===== PROJECTS PAGE STYLING ===== */
 .projects-page {
   color: var(--text-light);
 }
@@ -221,10 +281,7 @@
   color: var(--yellow-1);
 }
 
-/* ===========================
-   GALLERY PAGE STYLING
-   =========================== */
-
+/* ===== GALLERY PAGE STYLING ===== */
 .gallery-page {
   color: var(--text-light);
 }
@@ -236,12 +293,15 @@
   max-width: 800px;
 }
 
+/* ===== RESPONSIVE GRID ===== */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
+  width: 100%;
 }
 
+/* ===== GALLERY ITEM ===== */
 .gallery-item {
   width: 100%;
   height: 200px;
@@ -256,14 +316,13 @@
   border-color: var(--yellow-1);
 }
 
+/* ===== PLACEHOLDER ===== */
 .placeholder {
   background: linear-gradient(145deg, var(--red-1), var(--dark-1));
 }
 
-/* ===========================
-   CONTACT PAGE STYLING
-   =========================== */
 
+/* ===== CONTACT PAGE STYLING ===== */
 .contact-page {
   color: var(--text-light);
 }
@@ -318,10 +377,7 @@
   background: var(--yellow-1);
 }
 
-/* ===========================
-   GLOBAL FOOTER
-   =========================== */
-
+/* ===== GLOBAL FOOTER ===== */
 .footer {
   width: 100%;
   text-align: center;
@@ -333,11 +389,7 @@
   font-size: 16px;
 }
 
-/* ===========================
-   GLOBAL PAGE CONTAINER
-   Controls layout & spacing
-   for all pages
-   =========================== */
+/* ===== GLOBAL PAGE CONTAINER ====== */
 .page-container {
   flex: 1;
   padding: 80px;

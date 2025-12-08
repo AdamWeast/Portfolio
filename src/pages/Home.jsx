@@ -1,27 +1,52 @@
+import { useNavigate } from "react-router-dom";
+
 function Home() {
+  const navigate = useNavigate();
+
   return (
-    <header className="hero-section">
-      {/* Left side text */}
-      <div className="hero-content">
-        <p className="subtitle">Developer • Designer • Creator</p>
+    <div className="page-container">
+      <header className="hero-section">
+        
+        {/* Left side content */}
+        <div className="hero-content">
+          <p className="subtitle">
+            Indie Game Developer • Software Engineer • Web Developer
+          </p>
 
-        <h1 className="hero-title">
-          I build <span className="highlight">scalable</span> web experiences.
-        </h1>
+          <h1 className="hero-title">
+            Welcome to my <span className="highlight">portfolio.</span>
+          </h1>
 
-        <p className="hero-text">
-          Welcome to my portfolio. I specialize in web development, design, and
-          creative solutions. Explore my work, skills, and projects below.
-        </p>
+          <p className="hero-text">
+            If you would like to see some of my work, check out the Projects tab.
+            If you have any questions or would like to reach out, click below.
+          </p>
 
-        <button className="cta-button">Get in Touch</button>
-      </div>
+          {/* BUTTONS */}
+          <div className="hero-buttons">
+            <button
+              className="cta-button"
+              onClick={() => navigate("/contact")}
+            >
+              Get in Touch
+            </button>
 
-      {/* Right side image */}
-      <div className="hero-image">
-        <div className="image-placeholder"></div>
-      </div>
-    </header>
+            <button
+              className="cta-button"
+              onClick={() => navigate("/projects")}
+            >
+              View My Projects
+            </button>
+          </div>
+        </div>
+
+        {/* Right side image placeholder */}
+        <div className="hero-image">
+          <div className="image-placeholder"></div>
+        </div>
+
+      </header>
+    </div>
   );
 }
 

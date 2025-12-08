@@ -3,36 +3,35 @@ function Projects() {
     <div className="page-container projects-page">
       <h1 className="page-title">Projects</h1>
       <p className="projects-intro">
-        Here are some of the projects I’ve worked on during my studies. Each
+        Here are some of the projects I’ve worked on during my studies and free time. Each
         project highlights different skills I've developed in web development,
-        design, and software engineering.
+        game design, and software engineering.
       </p>
 
       {/* ===== PROJECTS GRID ===== */}
       <div className="projects-grid">
         {/* ===== Project 1 ===== */}
         <div className="project-card">
-          <h2>CS601 Term Project</h2>
+          <h2>CS-601 Term Project</h2>
           <p>
-            A multi-page React website using modern web technologies including
-            Vite, React Router, Firebase, and Netlify deployment. This project
-            demonstrates skills in front-end architecture and component-based
-            design.
+            A multi-page React portfolio website built with Vite, React Router, Firebase, and Netlify. 
+            This project showcases component-based design, client-side routing, API integration, and 
+            responsive UI development.
           </p>
-          <a href="#" target="_blank" className="project-link">
+          <a href="https://github.com/AdamWeast/CS601_FinalProject_Cebulski.git" target="_blank" className="project-link">
             View GitHub Repo
           </a>
         </div>
 
         {/* ===== Project 2 ===== */}
         <div className="project-card">
-          <h2>React Portfolio (HW5)</h2>
+          <h2>CS-622 Point & Click Adventure Game</h2>
           <p>
-            A React application built as part of the CS601 React introduction
-            module. Includes component structure, state basics, and styled
-            interface design.
+            A lightweight point-and-click adventure prototype created in Unreal Engine 5. Developed 
+            using a mix of Blueprints and C++ to implement player interaction, camera control, scene logic, 
+            and basic gameplay systems.
           </p>
-          <a href="#" target="_blank" className="project-link">
+          <a href="https://github.com/AdamWeast/CS622_PointClick_Cebulski.git" target="_blank" className="project-link">
             View GitHub Repo
           </a>
         </div>
@@ -41,12 +40,12 @@ function Projects() {
         <div className="project-card">
           <h2>Game Development Practice</h2>
           <p>
-            Early development in Unreal Engine 5. Focused on level design,
-            blueprints, C++ fundamentals, and project structure. Includes demo
-            scenes and gameplay prototypes.
+            An early-stage Unreal Engine 5 prototype focused on gameplay experimentation, Blueprints/C++ 
+            integration, animation testing, and incremental feature development. This project explores level 
+            design, interaction systems, debugging, and engine workflow fundamentals.
           </p>
-          <a href="#" target="_blank" className="project-link">
-            Preview Coming Soon
+          <a href="https://github.com/AdamWeast/Some-Assembly-Required.git" target="_blank" className="project-link">
+            View GitHub Repo
           </a>
         </div>
       </div>
