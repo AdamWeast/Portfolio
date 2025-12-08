@@ -1,16 +1,44 @@
-# React + Vite
+CS601 Final Project — Personal Portfolio Website
+Author: Adam Cebulski
+Course: MET CS 601 — Web Application Development
+Live Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Deployed on Netlify:
+https://cs601finalproject.netlify.app/
 
-Currently, two official plugins are available:
+Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a fully functional, multi-page personal portfolio website built using React, Vite, React Router, Firebase Firestore, and custom CSS. It showcases my work in web development, software engineering, and game development.
 
-## React Compiler
+The website includes five fully designed pages:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Home — Introduction and calls to action
+- About — Background, skills, and program information
+- Projects — A showcase of academic and personal development projects
+- Gallery — Screenshots from Unreal Engine 5, Firebase, and other work
+- Contact — A functional contact form connected to Firebase Firestore
 
-## Expanding the ESLint configuration
+Features:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Five fully designed routed pages (Home, About, Projects, Gallery, Contact)
+- Firebase-powered contact form with validation
+- Responsive layout using Flexbox and Grid
+- Gallery with real images and hover animations
+- Themed UI with consistent color palette
+
+Technologies Used:
+
+- React (with Vite)
+- React Router DOM
+- JavaScript (ES6+)
+- HTML5 & Semantic Elements
+- Flexbox
+- Firebase Firestore Database
+- Netlify
+
+How To Run:
+
+1. git clone https://github.com/AdamWeast/CS601_FinalProject_Cebulski.git
+2. npm install
+3. npm run dev
+4. npm run build
