@@ -1,8 +1,8 @@
-// Import global styles and React Router components
+// Import global styles and React Router components.
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 
-// Import the pages we will display for each route
+// Import the pages to display for each naviagtion link.
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
@@ -13,11 +13,9 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div className="app-container">
-      {/* ===========================
-          NAVIGATION BAR (HEADER)
-          =========================== */}
+      {/* ===== NAVIGATION BAR ===== */}
       <nav className="navbar">
-        {/* Logo or name in top-left */}
+        {/* Logo/Name */}
         <div className="nav-logo">Adam Cebulski</div>
 
         {/* Navigation links using React Router */}
@@ -40,11 +38,7 @@ function App() {
         </ul>
       </nav>
 
-      {/* ===========================
-          PAGE ROUTES
-          Determines which component 
-          (page) to show based on URL
-          =========================== */}
+      {/* ===== PAGE ROUTES ===== */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

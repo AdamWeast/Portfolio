@@ -15,7 +15,9 @@
 }
 
 /* Ensure the full document and React root expand to full height */
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -29,7 +31,7 @@ body {
   /* Existing theme settings */
   min-width: 320px;
   min-height: 100vh;
-  background-color: #220901; /* match theme */
+  background-color: #220901;
 }
 
 /* Allow main content to expand and push footer down */
