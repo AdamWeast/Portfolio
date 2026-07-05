@@ -1,0 +1,355 @@
+/* ===== GLOBAL COLORS ===== */
+:root {
+  --dark-1: #220901;
+  --dark-2: #621708;
+  --red-1: #941b0c;
+  --orange-1: #bc3908;
+  --yellow-1: #f6aa1c;
+
+  --text-light: #ffffff;
+  --text-subtle: #dddddd;
+}
+
+/* ===== GENERAL LAYOUT ===== */
+.app-container {
+  background: var(--dark-1);
+  min-height: 100vh;
+  color: var(--text-light);
+  font-family: Arial, sans-serif;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== NAVIGATION ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: var(--dark-2);
+  border-bottom: 2px solid var(--orange-1);
+}
+
+.nav-logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--yellow-1);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--yellow-1);
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 80px;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.subtitle {
+  color: var(--yellow-1);
+  font-size: 18px;
+}
+
+.hero-title {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+.highlight {
+  color: var(--orange-1);
+}
+
+.hero-text {
+  color: var(--text-subtle);
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* BASE BUTTON — both buttons use this identically */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 50px;
+  padding: 0 28px;
+
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 2px solid var(--orange-1);
+
+  cursor: pointer;
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+/* PRIMARY (filled) */
+.btn.primary {
+  background: var(--orange-1);
+  color: var(--text-light);
+}
+
+.btn.primary:hover {
+  background: var(--yellow-1);
+  border-color: var(--yellow-1);
+  color: var(--dark-1);
+}
+
+/* OUTLINE */
+.btn.outline {
+  background: var(--dark-1);
+  color: var(--orange-1);
+}
+
+.btn.outline:hover {
+  background: var(--orange-1);
+  border-color: var(--orange-1);
+  color: var(--text-light);
+}
+
+/* ===== HERO IMAGE ===== */
+.hero-image {
+  width: 300px;
+  height: 400px;
+  background: var(--dark-2);
+  border: 2px solid var(--orange-1);
+  border-radius: 12px;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, var(--red-1), var(--dark-1));
+  border-radius: 12px;
+}
+
+/* ===== ABOUT PAGE STYLING ===== */
+.about-page {
+  color: var(--text-light);
+}
+
+.page-title {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: var(--yellow-1);
+}
+
+.about-intro {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: var(--text-subtle);
+  max-width: 800px;
+}
+
+.about-section {
+  display: flex;
+  gap: 60px;
+}
+
+.about-text,
+.about-details {
+  flex: 1;
+}
+
+.about-text h2,
+.about-details h2 {
+  color: var(--orange-1);
+  margin-bottom: 10px;
+}
+
+.about-text p,
+.about-details p,
+.about-details li {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-subtle);
+}
+
+.about-details ul {
+  list-style-type: square;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+/* ===== PROJECTS PAGE STYLING ===== */
+.projects-page {
+  color: var(--text-light);
+}
+
+.projects-intro {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: var(--text-subtle);
+  max-width: 800px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.project-card {
+  background: var(--dark-2);
+  border: 2px solid var(--orange-1);
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--yellow-1);
+}
+
+.project-card h2 {
+  color: var(--yellow-1);
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: var(--text-subtle);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.project-link {
+  text-decoration: none;
+  color: var(--orange-1);
+  font-weight: bold;
+}
+
+.project-link:hover {
+  color: var(--yellow-1);
+}
+
+/* ===== GALLERY PAGE STYLING ===== */
+.gallery-page {
+  color: var(--text-light);
+}
+
+.gallery-intro {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: var(--text-subtle);
+  max-width: 800px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 200px;
+  background: var(--dark-2);
+  border: 2px solid var(--orange-1);
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  border-color: var(--yellow-1);
+}
+
+.placeholder {
+  background: linear-gradient(145deg, var(--red-1), var(--dark-1));
+}
+
+/* ===== CONTACT PAGE STYLING ===== */
+.contact-page {
+  color: var(--text-light);
+}
+
+.contact-intro {
+  font-size: 20px;
+  margin-bottom: 40px;
+  max-width: 800px;
+  color: var(--text-subtle);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  gap: 20px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: var(--yellow-1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 2px solid var(--orange-1);
+  border-radius: 8px;
+  background: var(--dark-2);
+  color: var(--text-light);
+  font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--yellow-1);
+  outline: none;
+}
+
+.submit-button {
+  background: var(--orange-1);
+  color: var(--text-light);
+  border: none;
+  padding: 14px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-button:hover {
+  background: var(--yellow-1);
+}
+
+/* ===== GLOBAL FOOTER ===== */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+  border-top: 2px solid var(--orange-1);
+  background: var(--dark-2);
+  color: var(--text-subtle);
+  font-size: 16px;
+}
+
+/* ===== GLOBAL PAGE CONTAINER ===== */
+.page-container {
+  flex: 1;
+  padding: 80px;
+}
