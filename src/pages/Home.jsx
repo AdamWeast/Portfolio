@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import portraitImg from "../assets/gallery/Portrait.jpg";
 
 function Home() {
   const navigate = useNavigate();
@@ -6,8 +7,7 @@ function Home() {
   return (
     <div className="page-container">
       <header className="hero-section">
-        
-        {/* Left side content */}
+        {/* Left Content */}
         <div className="hero-content">
           <p className="subtitle">
             Indie Game Developer • Software Engineer • Web Developer
@@ -18,16 +18,14 @@ function Home() {
           </h1>
 
           <p className="hero-text">
-            If you would like to see some of my work, check out the Projects tab.
-            If you have any questions or would like to reach out, click below.
+            If you would like to see some of my work, check out the Projects
+            tab. If you have any questions or would like to reach out, click
+            below.
           </p>
 
           {/* BUTTONS */}
           <div className="hero-buttons">
-            <button
-              className="cta-button"
-              onClick={() => navigate("/contact")}
-            >
+            <button className="cta-button" onClick={() => navigate("/contact")}>
               Get in Touch
             </button>
 
@@ -40,11 +38,10 @@ function Home() {
           </div>
         </div>
 
-        {/* Right side image placeholder */}
+        {/* Right Image */}
         <div className="hero-image">
-          <div className="image-placeholder"></div>
+          <img src={portraitImg} alt="Portrait" className="portrait-img" />
         </div>
-
       </header>
     </div>
   );

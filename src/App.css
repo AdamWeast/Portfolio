@@ -125,6 +125,35 @@
   border-radius: 12px;
 }
 
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@media (max-width: 700px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+    width: 250px;
+    height: 320px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
 /* ===== DYNAMIC HERO SECTION ===== */
 @media (max-width: 900px) {
   .hero-section {
@@ -320,7 +349,6 @@
 .placeholder {
   background: linear-gradient(145deg, var(--red-1), var(--dark-1));
 }
-
 
 /* ===== CONTACT PAGE STYLING ===== */
 .contact-page {
